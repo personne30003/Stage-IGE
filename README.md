@@ -14,7 +14,7 @@ Pour les données voir [ce dépôt Google Drive](https://drive.google.com/drive/
 - `Variabilite_flux.ipynb` : Comparaison des flux turbulents entre les stations T2, T2R et T2L. Mesure de $z_{max}$ sur T2R et T2L (deux niveaux seulement).
 - `flux_T2_Left.ipynb` : Distribution des paramètres de stabilité ($R_b$ et $\frac{z}{L}$), comparaison des flux calculés sur 2min et 30min
 - `flux_T2_Right.ipynb` : Idem, avec test de la méthode Bulk, dépendance des flux vis à vis de la vitesse du vent et de la température. **Il s'agit du seul notebook où on a le flux de chaleur latente !**.
--  `flux_T2_TO5.ipynb` : Idem que `flux_T2_Left.ipynb`, vérification des lois de similitude (flux gradient et flux-variance), contrôles qualitéq.
+-  `flux_T2_TO5.ipynb` : Idem que `flux_T2_Left.ipynb`, vérification des lois de similitude (flux gradient et flux-variance), contrôles qualité.
 -  `rose_des_vents_IGE.ipynb` : Tracé de la rose des vents, à partir de la station météo située sur le toit du bâtiment OSUG-B. Peut toujours servir...
 -  `comparaison_flux_brut_vs_EC.ipynb` : Comparaison des flux turbulents/grandeurs moyennes avec/sans prétraitement, sur T2 et sur des segments de 30min.
 ## Librairies (dont je suis l'auteur)
@@ -51,7 +51,8 @@ z_T2_1_30min=xr.DataArray(data=z_1_30min,
                          coords={'temps':('temps',T2R_1_30min.coords['temps'].values)})
 T2R_1_30min=T2R_1_30min.assign({'instrument_height':z_T2_1_30min})
 ```
-C'est pas très beau, mais ça fonctionne.
+C'est pas très beau, mais ça fonctionne. Note : Il semblerait que la hauteur (en cm) soit aussi disponible dans le fichier `fluxnet` (label `BADM_INST_HEIGHT_SA`) !!      
+Dans la sortie d'EddyPro, l'unité de la variable `w/h2o_cov` n'est pas précisée (ni dans le manuel, d'ailleurs !). Il s'agit vraisemblablement de $m\cdot s^{-1} \cdot g\cdot m^{-3}$.
 
 ## Librairies nécessaires : 
 Tous les programmes sont écrits en langage **Python 3**. A part la bibliothèque standard, les librairies suivantes sont utilisés : 
