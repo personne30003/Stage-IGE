@@ -60,7 +60,8 @@ Tous les programmes sont écrits en langage **Python 3**. A part la bibliothèqu
 - Parseur de chaines de caractère : [`scanf`](https://pypi.org/project/scanf/).
 - Barres de progression : [`tqdm`](https://tqdm.github.io/)
 - Tracé de roses des vents : [`windrose`](https://python-windrose.github.io/windrose/)
-- Lecture/écriture de fichiers NETCDF [`netcdf4`](https://unidata.github.io/netcdf4-python/)
+- Lecture/écriture de fichiers NETCDF [`netcdf4`](https://unidata.github.io/netcdf4-python/)   
+
 Pour les notebooks Python, j'utilise [Jupyter Notebook](https://jupyter.org/install).
 Pour les programmes et les librairies, j'utilise soit IDLE (installé de base en même temps que Python), soit [Pycharm](https://www.jetbrains.com/fr-fr/pycharm/).
 ## Conditions d'utilisation
