@@ -1,7 +1,6 @@
 # Fichiers de travail
 Ce repertoire regroupe tous les programmes utilisés pendant mon stage.   
 Pour les données voir [ce dépôt Google Drive](https://drive.google.com/drive/folders/18Ba65oPThXsAqQ-eXRMZ9NYaX64OMVZB?usp=sharing) 
-
 ## Notebooks Python : 
 - `Grachev_T2_TO5.ipynb` : Tracé de profils verticaux sur T2, mesure de la hauteur du maximum de vent catabatique $z_{max}$ (inspiré de *[Grachev et al. 2016]*). Visualisation des spectres/cospectres de Fourier en période catabatique, essai de la méthode Bulk
   **A FAIRE : Certaines parties du codes sont redondantes, donc pour raisons de lisibilité ce serait bien d'écrire des fonctions à la place**
@@ -52,7 +51,7 @@ z_T2_1_30min=xr.DataArray(data=z_1_30min,
 T2R_1_30min=T2R_1_30min.assign({'instrument_height':z_T2_1_30min})
 ```
 C'est pas très beau, mais ça fonctionne. Note : Il semblerait que la hauteur (en cm) soit aussi disponible dans le fichier `fluxnet` (label `BADM_INST_HEIGHT_SA`) !!      
-Dans la sortie d'EddyPro, l'unité de la variable `w/h2o_cov` n'est pas précisée (ni dans le manuel, d'ailleurs !). Il s'agit vraisemblablement de $m\cdot s^{-1} \cdot g\cdot m^{-3}$.
+Dans la sortie d'EddyPro, l'unité de la variable `w/h2o_cov` n'est pas précisée (dans le manuel non plus, d'ailleurs !). Il s'agit vraisemblablement de $m\cdot s^{-1} \cdot g\cdot m^{-3}$.
 
 ## Librairies nécessaires : 
 Tous les programmes sont écrits en langage **Python 3**. A part la bibliothèque standard, les librairies suivantes sont utilisés : 
