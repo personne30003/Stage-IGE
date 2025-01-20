@@ -51,7 +51,9 @@ z_T2_1_30min=xr.DataArray(data=z_1_30min,
 T2R_1_30min=T2R_1_30min.assign({'instrument_height':z_T2_1_30min})
 ```
 C'est pas très beau, mais ça fonctionne. Note : Il semblerait que la hauteur (en cm) soit aussi disponible dans le fichier `fluxnet` (label `BADM_INST_HEIGHT_SA`) !!      
-Dans la sortie d'EddyPro, l'unité de la variable `w/h2o_cov` n'est pas précisée (dans le manuel non plus, d'ailleurs !). Il s'agit vraisemblablement de $m\cdot s^{-1} \cdot g\cdot m^{-3}$.
+Dans la sortie d'EddyPro, l'unité de la variable `w/h2o_cov` n'est pas précisée (dans le manuel non plus, d'ailleurs !). Il s'agit vraisemblablement de $m\cdot s^{-1} \cdot g\cdot m^{-3}$.   
+
+Sauf (rares) exceptions, **les dates sont exprimées sous formes d'objets [`numpy.datetime64`](https://numpy.org/devdocs/reference/arrays.datetime.html)**
 
 ## Librairies nécessaires : 
 Tous les programmes sont écrits en langage **Python 3**. A part la bibliothèque standard, les librairies suivantes sont utilisés : 
